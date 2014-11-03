@@ -37,4 +37,4 @@ Example input file (input.csv)
 
 8,0,0,9,0,0,5,2,6
 
-Empty cells are represented with zeros
+Empty cells (to be filled by the algorithm) are represented with zeros
