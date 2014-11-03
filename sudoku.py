@@ -132,7 +132,7 @@ def solve(grid):
 
 
 def solve_test_file(filename):
-    """Solve a batch of sudoku file from a test file"""
+    """Solve a batch of sudoku instances from a test file"""
     input_file = open(filename, 'r')
     for (i,line) in enumerate(input_file):
         print "\nSolving %d: %s" % (i, line[:-1])
@@ -158,9 +158,9 @@ if __name__ == "__main__":
     else:
         if (sys.argv[1] == "-t"):
             if (sys.argv[2] == "easy"):
-                solve_test_file("easy.txt")
+                print "Test passed? " + str(solve_test_file("easy.txt"))
             elif sys.argv[2] == "hard":
-                solve_test_file("hard.txt")
+                print "Test passed? " + str(solve_test_file("hard.txt"))
             else:
                 print "USAGE: \n./sudoku input output \n or \n./sudoku -t {easy,hard}"
         else:
