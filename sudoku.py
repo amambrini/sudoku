@@ -151,10 +151,12 @@ def solve_test_file(filename):
                 return False
     return True
 
+def print_usage():
+        print "USAGE:\t./sudoku input output \nTESTING MODE:\t./sudoku -t {easy,hard}"
 
 if __name__ == "__main__":
     if len(sys.argv) != 3:
-        print "USAGE:\t./sudoku input output \nTESTING MODE:\t./sudoku -t {easy,hard}"
+        print_usage()
     else:
         if (sys.argv[1] == "-t"):
             if (sys.argv[2] == "easy"):
@@ -162,7 +164,7 @@ if __name__ == "__main__":
             elif sys.argv[2] == "hard":
                 print "Test passed? " + str(solve_test_file("hard.txt"))
             else:
-                print "USAGE: \n./sudoku input output \n or \n./sudoku -t {easy,hard}"
+                print_usage()
         else:
             try:
                 grid = np.genfromtxt(sys.argv[1], delimiter=',')
